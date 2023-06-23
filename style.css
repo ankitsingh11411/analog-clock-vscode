@@ -9,7 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(#04a3a5, #02102d);
+  background: linear-gradient(#000000, #5c0303f6, #020138);
 }
 
 .container {
@@ -20,36 +20,53 @@ body {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
-  animation: 2s ease-in infinite alternate;
 }
 
 .container .circle:nth-child(1) {
-  width: 180px;
-  height: 180px;
-  top: -50px;
-  left: 50px;
-  background: linear-gradient(#86f6f4, #0476af, #030c73);
+  width: 450px;
+  height: 450px;
+  background: linear-gradient(#002df550, #034f5cf6, #5a040457);
+  animation: 1s ease-in infinite alternate;
   animation-name: move-up;
 }
 
 @keyframes move-up {
   to {
-    transform: translate(-10px);
+    transform: translate(-5px);
   }
 }
 
 .container .circle:nth-child(2) {
-  width: 120px;
-  height: 120px;
-  top: 350px;
-  left: 300px;
-  background: linear-gradient(#020c58, #0885c4, #73e4d9);
+  width: 100px;
+  height: 100px;
+  top: 420px;
+  left: 30px;
+  background: linear-gradient(#565c03f6, #ff060662);
+  backdrop-filter: blur(10px);
+  animation: 0.5s ease-in infinite alternate;
   animation-name: move-down;
 }
 
 @keyframes move-down {
   to {
-    transform: translate(10px);
+    transform: translate(60px);
+  }
+}
+
+.container .circle:nth-child(3) {
+  width: 180px;
+  height: 180px;
+  top: -180px;
+  left: 150px;
+  background: linear-gradient(#072194, #034f5c00);
+  backdrop-filter: blur(10px);
+  animation: 2s ease-in infinite alternate;
+  animation-name: move-down2;
+}
+
+@keyframes move-down2 {
+  to {
+    transform: translate(120px);
   }
 }
 
@@ -61,9 +78,35 @@ body {
   justify-content: center;
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(0px);
   background: rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+}
+.circle .circle-bg img {
+  width: 100%;
+  height: 100%;
+  filter: contrast(150%);
+  filter: brightness(500%);
+}
+
+.circle .circle2-bg img {
+  width: 100%;
+  height: 100%;
+  filter: contrast(200%);
+  filter: opacity(80%);
+  filter: brightness(30%);
+}
+
+.circle .circle3-bg img {
+  width: 100%;
+  height: 100%;
+  filter: contrast(150%);
+  filter: brightness(500%);
 }
 
 .clock .clock-bg img {
