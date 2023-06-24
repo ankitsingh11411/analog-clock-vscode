@@ -6,11 +6,13 @@
 
 body {
   height: 100vh;
+  width: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(#360202, #000d29f6, #420332, #680202e1, #020227);
-  backdrop-filter: blur(20px);
+  background-image: url(blackspace.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .container {
@@ -24,11 +26,14 @@ body {
 }
 
 .container .circle:nth-child(1) {
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 50px;
+  top: -10px;
+  left: -10px;
   background: linear-gradient(#5b5c0385, #f020048a);
   animation: 1s ease-in infinite alternate;
   animation-name: move-up;
+  filter: blur(3.5rem);
 }
 
 @keyframes move-up {
@@ -44,13 +49,13 @@ body {
   left: 30px;
   background: linear-gradient(#fcfcfcf6, #06296962);
   backdrop-filter: blur(10px);
-  animation: 0.5s ease-in infinite alternate;
+  animation: 2s ease-in infinite alternate;
   animation-name: move-down;
 }
 
 @keyframes move-down {
   to {
-    transform: translate(60px);
+    transform: translate(100px);
   }
 }
 
@@ -61,7 +66,7 @@ body {
   left: 150px;
   background: linear-gradient(#072194, #034f5c00);
   backdrop-filter: blur(10px);
-  animation: 2s ease-in infinite alternate;
+  animation: 8s ease-in infinite alternate;
   animation-name: move-down2;
 }
 
@@ -176,3 +181,5 @@ body {
   z-index: 12;
   border-radius: 2px;
 }
+
+background: linear-gradient(#360202, #000d29f6, #420332, #680202e1, #020227);
